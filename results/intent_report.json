@@ -1,0 +1,66 @@
+{
+  "ask_law": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 189,
+    "confused_with": {}
+  },
+  "ready_to_ask": {
+    "precision": 0.9285714285714286,
+    "recall": 0.975,
+    "f1-score": 0.951219512195122,
+    "support": 40,
+    "confused_with": {
+      "out_of_scope": 1
+    }
+  },
+  "greet": {
+    "precision": 0.9487179487179487,
+    "recall": 0.925,
+    "f1-score": 0.9367088607594937,
+    "support": 40,
+    "confused_with": {
+      "out_of_scope": 2,
+      "ready_to_ask": 1
+    }
+  },
+  "goodbye": {
+    "precision": 1.0,
+    "recall": 0.9743589743589743,
+    "f1-score": 0.9870129870129869,
+    "support": 39,
+    "confused_with": {
+      "greet": 1
+    }
+  },
+  "out_of_scope": {
+    "precision": 0.925,
+    "recall": 0.925,
+    "f1-score": 0.925,
+    "support": 40,
+    "confused_with": {
+      "ready_to_ask": 2,
+      "greet": 1
+    }
+  },
+  "accuracy": 0.9770114942528736,
+  "macro avg": {
+    "precision": 0.9604578754578755,
+    "recall": 0.959871794871795,
+    "f1-score": 0.9599882719935205,
+    "support": 348
+  },
+  "weighted avg": {
+    "precision": 0.9772746410677444,
+    "recall": 0.9770114942528736,
+    "f1-score": 0.977042073022101,
+    "support": 348
+  },
+  "micro avg": {
+    "precision": 0.9770114942528736,
+    "recall": 0.9770114942528736,
+    "f1-score": 0.9770114942528736,
+    "support": 348
+  }
+}

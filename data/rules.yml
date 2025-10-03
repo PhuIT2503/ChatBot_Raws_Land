@@ -1,0 +1,27 @@
+version: "3.1"
+
+rules:
+- rule: chào hỏi
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+- rule: tạm biệt
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- rule: xác nhận sẵn sàng
+  steps:
+    - intent: ready_to_ask
+    - action: utter_ready
+
+- rule: hỏi luật
+  steps:
+    - intent: ask_law
+    - action: action_query_rag
+
+- rule: câu hỏi ngoài phạm vi
+  steps:
+    - intent: out_of_scope
+    - action: utter_out_of_scope

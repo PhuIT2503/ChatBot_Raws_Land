@@ -1,0 +1,66 @@
+[
+  {
+    "text": "ê có rảnh k",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.999983549118042
+    }
+  },
+  {
+    "text": "alo alo test mic nhe",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.9888101816177368
+    }
+  },
+  {
+    "text": "ê bạn có onl hok",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "ready_to_ask",
+      "confidence": 0.9905253648757935
+    }
+  },
+  {
+    "text": "pp bạn",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.9979653358459473
+    }
+  },
+  {
+    "text": "can ban giai dap",
+    "intent": "ready_to_ask",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.9874337315559387
+    }
+  },
+  {
+    "text": "mấy giờ rồi",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "ready_to_ask",
+      "confidence": 0.9218151569366455
+    }
+  },
+  {
+    "text": "minh muon di cf",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "ready_to_ask",
+      "confidence": 0.9945988655090332
+    }
+  },
+  {
+    "text": "alo alo alo",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.9999998807907104
+    }
+  }
+]

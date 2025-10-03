@@ -1,0 +1,231 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - xin chào
+    - chào bạn
+    - hello
+    - hi
+    - chào buổi sáng
+    - Bạn là ai?
+    - xin chao
+    - chao bn
+    - hiii
+    - helo
+    - chào buổi tối nha
+    - ban la ai vayy
+    - hello bạn
+
+- intent: goodbye
+  examples: |
+    - tạm biệt
+    - chào tạm biệt
+    - bye
+    - hẹn gặp lại
+    - gặp sau nhé
+    - tạm biệt nhé
+    - tam biet
+    - bai bai
+    - bye c
+    - hẹn gap lai ban
+    - gap sau nha
+    - bái baiii
+    - good bye
+    - bái bai
+    - bye nha
+    - tui out nhe
+    - hẹn gặp lại
+    - thoi tam biet
+    - bai mn
+    - mk đi đây
+    - gặp lại sau
+    - see u soon
+    
+
+- intent: ready_to_ask
+  examples: |
+    - tôi muốn hỏi
+    - tôi đã sẵn sàng để hỏi
+    - bắt đầu được chưa
+    - tôi có câu hỏi
+    - cho tôi hỏi
+    - tôi muốn hỏi
+    - toi muon hoi cj do
+    - dc hoi chua
+    - bắt đầu hỏi dk chua
+    - minh co cau hoi nè
+    - toi co cau hoij
+    - m muon hoi phap luat
+    - tui co cau nay hoi
+    - giờ hỏi dc chưa
+    - ê hỏi tí nha
+    - cho em hỏi
+    - m hỏi luật phát
+    - muốn hỏi chuyện này
+    - dc phép hỏi chua
+    - hỏi cái dc hông
+    - mình có thắc mắc
+    - test thử câu hỏi
+
+- intent: ask_law
+  examples: |
+    - Điều kiện kết hôn hợp pháp là gì?
+    - Thủ tục ly hôn gồm những gì?
+    - Tôi muốn biết quyền nuôi con sau ly hôn
+    - Hồ sơ đăng ký kết hôn cần giấy tờ gì?
+    - Khi nào thì hợp đồng lao động bị vô hiệu?
+    - Tôi muốn hỏi về luật bảo hiểm xã hội
+    - Quyền lợi của người lao động khi nghỉ việc là gì?
+    - Tôi cần tư vấn về luật đất đai
+    - Thủ tục xin giấy phép xây dựng như thế nào?
+    - Tôi muốn biết về luật thuế thu nhập cá nhân
+    - Làm thế nào để khởi kiện dân sự?
+    - Tôi cần tư vấn về luật hình sự
+    - Tôi muốn hỏi về luật doanh nghiệp
+    - Quyền và nghĩa vụ của cổ đông trong công ty là gì?
+    - Tôi cần biết về luật sở hữu trí tuệ
+    - Thủ tục đăng ký bản quyền tác giả như thế nào?
+    - Tôi muốn hỏi về luật thương mại
+    - Tôi cần tư vấn về luật hôn nhân và gia đình
+    - Tôi muốn biết về luật bảo vệ người tiêu dùng
+    - Quyền lợi của người tiêu dùng khi mua hàng là gì?
+    - Tôi cần tư vấn về luật môi trường
+    - Thủ tục xin giấy phép môi trường như thế nào?
+    - Tôi muốn hỏi về luật giao thông
+    - Quy định về tốc độ lái xe trong khu dân cư là gì?
+    - Tôi cần tư vấn về luật lao động
+    - Quyền lợi của người lao động khi bị tai nạn lao động là gì?
+    - Tôi muốn hỏi về luật thuế
+    - Thủ tục kê khai thuế thu nhập cá nhân như thế nào?
+    - Tôi cần tư vấn về luật hải quan
+    - Thủ tục nhập khẩu hàng hóa như thế nào?
+    - Tôi muốn hỏi về luật ngân hàng
+    - Quy định về lãi suất vay ngân hàng hiện nay là gì?
+    - Tôi cần tư vấn về luật chứng khoán
+    - Thủ tục đăng ký giao dịch chứng khoán như thế nào?
+    - Tôi muốn hỏi về luật bảo hiểm
+    - Quyền lợi của người tham gia bảo hiểm y tế là gì?
+    - dieu kien ket hon la ji
+    - thủ tục li hon gom nhug j
+    - ho so dk ket hon can giay to gi
+    - Khi nào thì hợp đồng lao động bị vô hiệu
+    - toi hoi ve luat bhxh
+    - quyen loi nguoi lao dong khi nghi viec la j
+    - Thủ tục xin giấy phép xd ntn
+    - lam sao de khoi kien dan su
+    - toi hoi ve luat hinh sư
+    - Thủ tục đăng ký bản quyền tg ntn
+    - quyen va nghia vu co dong trg cty
+    - Quy định về tốc độ lái xe trong khu dân cư la ji
+    - quyen loi nguoi tieu dung khi mua hang là gì
+    - Thu tuc kê khai thue tncn ntn
+    - qdinh lai suat vay ngan hang hja nay
+    - quyền lợi ng tham ja bhyt la j
+    - muốn biết về luật đất đai
+    - cho tôi hỏi bảo hiểm thất nghiệp nhận tiền thế nào
+    - lam the nao de dang ky hon nhan voi nguoi ngoai quoc
+    - quyền lợi khi nghỉ việc là sao
+    - thủ tục cấp sổ đỏ gồm gì
+    - kiện hành chính thì làm sao
+    - mức xử phạt nồng độ cồn là bao nhiêu
+    - chuyen nhuong co phan thi can gi
+    - thừa kế tài sản chia ntn
+    - muon lam cccd can nhung giay to gi
+    - chế độ ốm đau theo luật bhxh
+    - dieu kien dang ky ho kinh doanh
+    - lương tối thiểu vùng 2024 la bn
+    - hop dong lam viec voi cong ty nn ntn
+    - muốn hỏi về quyền lợi công đoàn
+    - quy trinh nop thue gtgt
+    - bị giam lương thì k kien dc khong
+    - thủ tục đổi tên công ty
+    - trách nhiệm pháp lý khi gây tai nạn giao thông
+    - cho tôi biết về luật sở hữu trí tuệ
+    - khai sinh cho con ở đâu
+    - mức bồi thường khi bị sa thải trái luật
+    - điều kiện nuôi con nuôi
+    - thời hạn hợp đồng thử việc
+    - quyền tác giả và quyền liên quan khác nhau sao
+    - thu tuc nhan tro cap that nghiep
+    - bao hiem y te tu nguyen mua the nao
+    - quy trinh xin phep xay nha
+    - quyen va nghia vu cua nguoi su dung dat
+    - t muon hoi ve hop dong mua ban nha
+    - neu bi lua dao online thi to cao ntn
+    - dang ky ban quyen phan mem thi sao
+    - muon mo cong ty co phan thi can gi
+    - nhung hanh vi nao bi cam trong hon nhan
+    - bi cong ty don phuong cham dut hdld thi lam sao
+    - dieu kien de tro thanh luat su
+    - cach viet don xin tam hoan nghia vu qs
+    - quy dinh ve giao dich dien tu
+    - trách nhiệm hình sự khi phạm tội lừa đảo
+    - luat moi ve an toan lao dong
+    - toi hoi ve chinh sach nha o xa hoi
+    - xin huong dan thu tuc nhap quoc tich vn
+    - qdinh moi ve luong hưu
+    - dieu kien duoc giam an tu
+    - quyen cua nguoi bi tam giam
+    - cach giai quyet tranh chap thuong mai
+    - trinh tu ly hon co con nho
+    - bao ve quyen tre em theo luat vn
+    - quy trinh khoi kien dan su
+    - trach nhiem khi gay on ao cong cong
+    - xin phep thanh lap truong tu
+    - co duoc ky hop dong lao dong dien tu khong
+    - mức phạt vượt đèn đỏ hiện nay
+    - cho mình hỏi chế độ thai sản
+    - thời hạn hưởng trợ cấp thất nghiệp
+    - quy dinh nghi tet 2025
+
+- intent: out_of_scope
+  examples: |
+    - Thời tiết hôm nay thế nào?
+    - Bạn có biết hát không?
+    - Tôi muốn đặt đồ ăn
+    - Kể chuyện cười đi
+    - 1 + 1 = mấy
+    - Bạn có thể giúp tôi làm bài tập không?
+    - Tôi muốn nghe nhạc
+    - Bạn có thể chơi game không?
+    - Bạn có biết nấu ăn không?
+    - Bạn có thể giải toán không?
+    - ban co choi gem k
+    - toi muon nge nhac
+    - b co nau an dc ko
+    - gjup toi lam bai tap toan vs
+    - ban co biet viet code k
+    - viet code giup toi
+    - biet choi the thao k
+    - choi the thao di
+    - biet choi game k
+    - choi game di
+    - toi muon dat do an
+    - dat do an di
+    - mở nhạc chill ik
+    - bn ăn cơm chưa
+    - hôm qua m xem phim gì
+    - biet choi lien quan ko
+    - gửi cho tôi cái ảnh
+    - ke truyen ma di
+    - 9x9 = bao nhieu
+    - dat ban cafe ho minh
+    - tui muon order pizza
+    - đi du lich o dau dep
+    - ai dang lam chu tich nuoc vn
+    - viet bai van cho toi
+    - bạn biết nói tiếng hàn ko
+    - thử đố vui đi
+    - ngày mai có mưa ko
+    - xem lich bong da hom nay
+    - b oi ban co iu ai chua
+    - tao muon choi co tuong
+    - cho link xem phim
+    - nhan dinh ve iphone 16 moi
+    - mình cần tìm quán cf đẹp
+    - gui hinh meo ik
+    - ve hinh con cho
+    - vẽ hình con chó
+    - ve anh dep
+    - vẽ ảnh đẹp

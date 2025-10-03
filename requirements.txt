@@ -1,0 +1,16 @@
+rasa==3.6.13
+rasa-sdk==3.6.2
+faiss-cpu
+transformers==4.37.2
+torch>=1.13.0
+tokenizers
+google-generativeai
+sqlite-utils
+numpy
+pandas
+scikit-learn
+flask
+uvicorn
+fastapi
+python-dotenv
+tqdm
