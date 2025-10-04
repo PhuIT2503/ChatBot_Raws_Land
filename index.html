@@ -20,6 +20,8 @@
     const input = document.getElementById("user-input");
     const sendBtn = document.getElementById("send-btn");
 
+    let typingTimer = null; // Lưu timer cho việc đổi chữ
+
     function addMessage(text, sender="user") {
       const msg = document.createElement("div");
       msg.classList.add("message", sender);
@@ -43,17 +45,33 @@
     }
 
     function showTyping() {
+      // Clear timer cũ nếu có
+      if (typingTimer) clearTimeout(typingTimer);
+
+      // Xóa typing cũ nếu còn
+      removeTyping();
+
       const typing = document.createElement("div");
       typing.classList.add("message", "bot", "typing");
       typing.innerHTML = `Đang suy nghĩ...`;
       typing.setAttribute("id", "typing");
       chatBox.appendChild(typing);
       chatBox.scrollTop = chatBox.scrollHeight;
+
+      // Sau 12 giây đổi chữ
+      typingTimer = setTimeout(() => {
+        const t = document.getElementById("typing");
+        if (t) t.innerHTML = "Đang tổng hợp thông tin...";
+      }, 12000);
     }
 
     function removeTyping() {
       const typing = document.getElementById("typing");
       if (typing) typing.remove();
+      if (typingTimer) {
+        clearTimeout(typingTimer);
+        typingTimer = null;
+      }
     }
 
     async function sendMessageToRasa(message) {

@@ -1,9 +1,7 @@
 # actions.py
 from rasa_sdk import Action, Tracker              # Import lớp Action và Tracker từ rasa_sdk để định nghĩa hành động tùy chỉnh
 from rasa_sdk.executor import CollectingDispatcher  # Import CollectingDispatcher để gửi tin nhắn phản hồi lại cho người dùng
-
-from query_rag import rag_search   # Import hàm rag_search từ file query_rag.py (hàm này xử lý tìm kiếm RAG)
-
+from query_qdrant import query_qdrant # Import hàm query_qdrant từ file query_qdrant.py (hàm này xử lý tìm kiếm Qdrant)
 import google.generativeai as genai  # Import thư viện Google Generative AI (Gemini API)
 import os                            # Import module os để thao tác với biến môi trường
 from dotenv import load_dotenv       # Import load_dotenv để đọc file .env
@@ -87,8 +85,7 @@ class ActionQueryRAG(Action):
         query = tracker.latest_message.get("text")
 
         try:
-            # Gọi hàm rag_search để tìm các đoạn văn bản liên quan từ FAISS và rerank bằng PhoRanker
-            docs = rag_search(query, top_k=30, top_k_rerank=5)
+            docs = query_qdrant(query, top_k=10, top_k_rerank=5)  # Gọi hàm query_qdrant để tìm các đoạn văn bản liên quan từ Qdrant
         except Exception as e:
             # Nếu lỗi khi tìm kiếm RAG -> báo lỗi cho người dùng
             dispatcher.utter_message(text=f"Lỗi RAG: {e}")
